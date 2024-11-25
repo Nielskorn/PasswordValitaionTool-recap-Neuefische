@@ -31,6 +31,15 @@ public class passwordValidationTest {
     void passwordCaseCheck(){
     ;
     }
+    @ParameterizedTest
+    @CsvSource({"false,lormIpsum",
+                "true,assword1",
+                "true,LYIFp1tqO8IU9aosuqBQ"
+
+        })
+    void passwordHasDigitsShouldReturnTrueForPasswordWithDigits(boolean expectedResult,String givenPassword) {
+        Assertions.assertEquals(expedtedResult,PasswordValidation.validatePasswordHasDigits(givePassword));
+    }
      
 
     }
