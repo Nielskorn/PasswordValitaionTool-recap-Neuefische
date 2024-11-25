@@ -50,8 +50,8 @@ public class passwordValidationTest {
             "true,LYIFp1tqO8IU9aosuqBQ"
 
     })
-    void validatePasswordNotCommon(boolean exectedResult ,String givenPassword)  {
-        Assertions.assertEquals(exectedResult,PasswordValidation.validatePasswordNotCommon(givenPassword));
+    void validatePasswordNotCommon(boolean expectedResult ,String givenPassword)  {
+        Assertions.assertEquals(expectedResult,PasswordValidation.validatePasswordNotCommon(givenPassword));
     }
      
 
