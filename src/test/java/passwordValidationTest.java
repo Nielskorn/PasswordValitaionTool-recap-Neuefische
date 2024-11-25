@@ -43,6 +43,16 @@ public class passwordValidationTest {
     void passwordHasDigitsShouldReturnTrueForPasswordWithDigits(boolean expectedResult,String givenPassword) {
         Assertions.assertEquals(expectedResult,PasswordValidation.validatePasswordHasDigits(givenPassword));
     }
+    @ParameterizedTest
+    @CsvSource ({"false,Password1",
+            "false,assword1",
+            "false,12345678",
+            "true,LYIFp1tqO8IU9aosuqBQ"
+
+    })
+    void validatePasswordNotCommon(boolean exectedResult ,String givenPassword)  {
+        Assertions.assertEquals(exectedResult,PasswordValidation.validatePasswordNotCommon());
+    }
      
 
     }
