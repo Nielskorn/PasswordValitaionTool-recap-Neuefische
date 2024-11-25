@@ -50,10 +50,15 @@ public class passwordValidationTest {
             "true,LYIFp1tqO8IU9aosuqBQ"
 
     })
-    void validatePasswordNotCommon(boolean expectedResult ,String givenPassword)  {
+    void validatePasswordNotCommonShouldReturnTrueIfPasswordIsNotCommon(boolean expectedResult ,String givenPassword)  {
         Assertions.assertEquals(expectedResult,PasswordValidation.validatePasswordNotCommon(givenPassword));
     }
-     
+    @ParameterizedTest
+    @CsvSource ({"false,password", "false,assword1","false,12345678","true,LYIFp1tqO8IU9aosuqBQ!"
+    })
+    void validatePasswordHasSpecialCharShouldReturnTruePasswordHasSpecialChar(boolean expectedResult,String givenPassword) {
+        Assertions.assertEquals(expectedResult,PasswordValidation.validatePasswordHasSpecialChar(givenPassword));
+    }
 
     }
 
