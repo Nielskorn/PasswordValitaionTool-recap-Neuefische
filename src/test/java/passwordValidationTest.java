@@ -19,11 +19,11 @@ public class passwordValidationTest {
             "false,is8",
             "false,c",
             "true,password",
-            "true,assword",
+            "false,assword",
             "true,LYIFp1tqO8IU9aosuqBQ"
     })
 
-   void passwordlength_ShouldReturnTrueForPasswordWithMoreThen8Symbols(boolean expectedResult,String givenPassword) {
+   void passwordLength_ShouldReturnTrueForPasswordWithMoreThen8Symbols(boolean expectedResult,String givenPassword) {
        Assertions.assertEquals(expectedResult, PasswordValidation.validatePasswordLength(givenPassword));
     //
     }
