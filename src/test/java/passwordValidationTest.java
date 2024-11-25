@@ -5,6 +5,7 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
+import org.neuefische.PasswordValidation;
 
 
 import java.util.stream.Stream;
@@ -21,7 +22,7 @@ public class passwordValidationTest {
             "true,assword",
             "true,LYIFp1tqO8IU9aosuqBQ"
     })
-   @MethodSource("providedPasswordLengthCheck")
+
    void passwordlength_ShouldReturnTrueForPasswordWithMoreThen8Symbols(boolean expectedResult,String givenPassword) {
        Assertions.assertEquals(expectedResult, PasswordValidation.validatePasswordLength(givenPassword));
     //
@@ -33,4 +34,4 @@ public class passwordValidationTest {
      
 
     }
-}
+
