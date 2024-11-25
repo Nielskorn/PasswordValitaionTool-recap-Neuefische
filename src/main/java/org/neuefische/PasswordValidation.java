@@ -53,6 +53,17 @@ public class PasswordValidation {
     }
 
     public static boolean validatePasswordHasSpecialChar(String givenPassword) {
-    return givenPassword.matches("^(?=.*[!]).*$");
-    }
+    return givenPassword.matches("(?=.*[!@#$%^&*(),.?\":{}|<>]).*$");
+
+
+}
+public static  boolean validatePassword(String givenPassword) {
+    boolean hasDigits=validatePasswordHasDigits(givenPassword);
+    boolean hasSpecialChar=validatePasswordHasSpecialChar(givenPassword);
+    boolean hasMultiCase=validatePasswordIsMultiCase(givenPassword);
+    boolean isNotCommon=validatePasswordNotCommon(givenPassword);
+    return hasDigits&&hasSpecialChar&&hasMultiCase&&isNotCommon;
+
+
+}
 }
