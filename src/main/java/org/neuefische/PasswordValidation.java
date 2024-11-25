@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+
 public class PasswordValidation {
     static File commonPasswords= new File(
 
@@ -49,5 +50,9 @@ public class PasswordValidation {
         e.printStackTrace();
     }
     return false;
+    }
+
+    public static boolean validatePasswordHasSpecialChar(String givenPassword) {
+    return givenPassword.matches("^(?=.*[!]).*$");
     }
 }
