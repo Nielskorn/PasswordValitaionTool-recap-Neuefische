@@ -11,9 +11,9 @@ public class Main {
         System.out.println("Welcome to the Password Validation Program");
         System.out.println("if you what do valided a Password press the 1 \n if u want a generated password press the 2");
         Scanner scanner = new Scanner(System.in);
-        int actiom=scanner.nextInt();
+        int action=scanner.nextInt();
         scanner.nextLine();
-        if(actiom==1){
+        if(action==1){
         System.out.println("Please enter your password");
 
         String password = scanner.nextLine();
@@ -23,7 +23,7 @@ public class Main {
               System.out.println(password+"is not a valid password");
           }
         }
-        else if (actiom==2){
+        else if (action==2){
             System.out.println("Please enter a desired length for your password it needs to be 8 or more");
             int length= scanner.nextInt();
             //consuming of /n because nextInt
