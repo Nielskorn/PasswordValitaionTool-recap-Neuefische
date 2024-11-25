@@ -44,7 +44,7 @@ public class passwordValidationTest {
         Assertions.assertEquals(expectedResult,PasswordValidation.validatePasswordHasDigits(givenPassword));
     }
     @ParameterizedTest
-    @CsvSource ({"false,Password1",
+    @CsvSource ({"false,password",
             "false,assword1",
             "false,12345678",
             "true,LYIFp1tqO8IU9aosuqBQ"
