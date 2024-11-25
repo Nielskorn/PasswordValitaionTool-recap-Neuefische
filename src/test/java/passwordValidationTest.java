@@ -38,7 +38,7 @@ public class passwordValidationTest {
 
         })
     void passwordHasDigitsShouldReturnTrueForPasswordWithDigits(boolean expectedResult,String givenPassword) {
-        Assertions.assertEquals(expectedResult,PasswordValidation.validatePasswordHasDigits(givePassword));
+        Assertions.assertEquals(expectedResult,PasswordValidation.validatePasswordHasDigits(givenPassword));
     }
      
 
