@@ -27,8 +27,11 @@ public class passwordValidationTest {
        Assertions.assertEquals(expectedResult, PasswordValidation.validatePasswordLength(givenPassword));
     //
     }
-    @Test
-    void passwordCaseCheck(){
+    @ParameterizedTest
+    @CsvSource({"true,lormIpsum","false,assword","true,LYIFp1tqO8IU9aosuqBQ"
+    })
+    void passwordCaseCheck(boolean expectedResult, String givenPassword) {
+        Assertions.assertEquals(expectedResult, PasswordValidation.validatePasswordIsMultiCase(givenPassword));
     ;
     }
     @ParameterizedTest
